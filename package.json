@@ -26,6 +26,7 @@
     "@types/styled-components": "^5.1.32",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "eslint-plugin-import": "^2.29.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
     "postcss-styled-syntax": "^0.5.0",
