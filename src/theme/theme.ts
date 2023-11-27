@@ -2,6 +2,10 @@ import colors from "./colors";
 
 export const theme = {
   colors,
+  bg: {
+    main: "#FFF",
+  },
+  borderColor: "#D9D9D9",
   radius: "6px",
   transition: "0.3s ease-in-out",
   spacer: [
