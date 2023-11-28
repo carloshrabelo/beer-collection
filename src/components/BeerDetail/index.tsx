@@ -13,6 +13,7 @@ interface Props extends Omit<IBeer, "name"> {
 }
 
 export default function BeerDetail({
+  className,
   image_url,
   name,
   ingredients: { hops, malt, yeast },
@@ -30,8 +31,8 @@ export default function BeerDetail({
   ...beer
 }: Props) {
   return (
-    <S.Wrapper>
-      <S.Title>{name}</S.Title>
+    <S.Wrapper className={className}>
+      {!name ? null : <S.Title>{name}</S.Title>}
       <S.Body>
         <S.ImageWraper>
           <S.Image src={image_url} alt="Beer" fill />
