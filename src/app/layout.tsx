@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
+
+import { ModalProvider } from "@/context/modal";
 import StyledComponentsRegistry from "@/lib/registry";
 import Theme from "@/lib/theme";
-import { Nunito } from "next/font/google";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Theme>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            <ModalProvider>
+              <main>{children}</main>
+            </ModalProvider>
+          </StyledComponentsRegistry>
         </Theme>
       </body>
     </html>
