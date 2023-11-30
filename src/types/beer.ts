@@ -47,3 +47,8 @@ export interface IBeer {
   brewers_tips: string;
   contributed_by: string;
 }
+
+export interface IBeerForm extends Omit<IBeer, "image_url" | "first_brewed"> {
+  image_url: FileList | string;
+  first_brewed: Date | string;
+}

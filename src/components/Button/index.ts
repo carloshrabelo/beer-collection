@@ -10,6 +10,7 @@ export const Button = styled.button<{ color?: Colors }>`
 
   display: inline-flex;
   gap: ${(props) => props.theme.spacer[1]};
+  align-items: center;
   justify-content: center;
 
   padding: ${(props) => `${props.theme.spacer[1]} ${props.theme.spacer[2]}`};
