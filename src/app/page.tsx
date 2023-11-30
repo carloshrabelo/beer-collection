@@ -1,8 +1,10 @@
-import BeerGrid from "@/components/BeerGrid";
-import { useGetBeerList } from "@/hook/useBeer";
+"use client";
 
-export default async function App() {
-  const { data } = await useGetBeerList();
+import BeerGrid from "@/components/BeerGrid";
+import { useBeerAPI } from "@/hook/useBeerAPI";
+
+export default function App() {
+  const { data } = useBeerAPI();
 
   return <BeerGrid data={data} />;
 }

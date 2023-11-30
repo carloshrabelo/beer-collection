@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 
+import { BeerProvider } from "@/context/beer";
 import { ModalProvider } from "@/context/modal";
 import StyledComponentsRegistry from "@/lib/registry";
 import Theme from "@/lib/theme";
@@ -22,9 +23,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <Theme>
           <StyledComponentsRegistry>
-            <ModalProvider>
-              <main>{children}</main>
-            </ModalProvider>
+            <BeerProvider>
+              <ModalProvider>
+                <main>{children}</main>
+              </ModalProvider>
+            </BeerProvider>
           </StyledComponentsRegistry>
         </Theme>
       </body>
