@@ -41,6 +41,22 @@ yarn start
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Folder structure
+
+```
+📂 public - Static file serving
+📂 src/
+┣━╾📂 app - Pages that reflect the browser address
+┣━╾📂 components - UI components
+┣━╾📂 context
+┣━╾📂 hook
+┣━╾📂 lib
+┣━╾📂 theme
+┣━╾📂 types
+┣━╾📂 utils - Functions helpers
+┗━╾📂 reducers - Reducer/Actions
+```
+
 ## Licença
 
 The [MIT License]() (MIT)
